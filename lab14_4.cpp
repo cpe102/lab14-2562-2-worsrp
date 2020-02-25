@@ -18,4 +18,36 @@ int main(){
 	return 0;
 }
 
-//Write definition of shuffle() here 
+void shuffle(int &a,int &b,int &c,int &d){
+	int x,temp;
+	for(int i=0;i<3;i++){
+		x=rand()%6; 
+		switch (x)
+		{
+			case 0: temp = a;
+					a=b;
+					b=temp;
+					break;
+			case 1: temp = a;
+					a=c;
+					c=temp;
+					break;
+			case 2: temp = a;
+					a=d;
+					d=temp;
+					break;
+			case 3: temp = b;
+					b=c;
+					c=temp;
+					break;
+			case 4: temp = b;
+					b=d;
+					d=temp;
+					break;
+			default: temp = c;
+					c=d;
+					d=temp;
+					break;
+		}
+	}
+}
